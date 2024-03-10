@@ -22,3 +22,6 @@ Including a slug in a blog post model is a best practice for web development, es
 
 Migrations in Django are used to apply and track changes to the database schema over time, reflecting modifications made to the models in the Django application. 
 They allow for version control of the database schema, enabling developers to update the database in a consistent, controlled manner across different environments and facilitate collaboration among team members.
+
+Django templates are a key feature of the Django web framework, designed for generating dynamic HTML content. 
+Templates define the structure of the output HTML, mixed with Django Template Language (DTL) tags and filters that allow for logic and data processing directly within the template. 
