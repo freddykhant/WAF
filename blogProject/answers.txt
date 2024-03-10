@@ -1,0 +1,21 @@
+exampleproject: project container;
+    exampleproject: separate project folder, inside the above;
+        init .py: tells Python to treat this directory as a package;
+        asgi.py: used to communicate with server software;
+        settings.py: contains your projects’ settings;
+        urls.py: contains route definitions for the project;
+        wsgi.py: used to communicate with server software.
+    exampleapp: app container directory (‘app folder’);
+        init .py: tells Python to treat this directory as a package;
+        admin.py: used to connect the App with Django’s admin and configure the App for it;
+        apps.py: contains App configuration settings, used with settings.py;
+        models.py: defines the model (classes) used with your App;
+        tests.py: defines unit test functions for the App (we won’t);
+        urls.py: contains route definitions for your App – needs to be created;
+        views.py: contains the App’s view (controller) functions that process requests and generates responses.
+
+Model: Not yet defined but will hold the data structure for your blog, like posts.
+View: Your index view in blogApp/views.py, handling the logic to display a "Hello World!" message in response to a web request.
+Controller: Implemented through your urls.py files, directing web requests to the correct view based on the URL pattern.
+
+Including a slug in a blog post model is a best practice for web development, especially for content management systems like blogs, where SEO and user experience are critical.
