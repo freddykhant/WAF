@@ -19,3 +19,6 @@ View: Your index view in blogApp/views.py, handling the logic to display a "Hell
 Controller: Implemented through your urls.py files, directing web requests to the correct view based on the URL pattern.
 
 Including a slug in a blog post model is a best practice for web development, especially for content management systems like blogs, where SEO and user experience are critical.
+
+Migrations in Django are used to apply and track changes to the database schema over time, reflecting modifications made to the models in the Django application. 
+They allow for version control of the database schema, enabling developers to update the database in a consistent, controlled manner across different environments and facilitate collaboration among team members.
