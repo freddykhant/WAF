@@ -7,15 +7,10 @@ from .models import Course, School
 #def index(request):
 #    return HttpResponse("Hello, World!")
 
-def courses_list(request):
-    courses = Course.objects.all()
-    return render(request, 'courses/courses_list.html', {'course' : courses})
-
-def schools_list(request):
+def school_list(request):
     schools = School.objects.all()
-    return render(request, 'courses/schools_list.html', {'school' : schools})
+    return render(request, 'courses/school_list.html', {'schools' : schools})
 
-def school_detail(request, school_id):
-    school = get_list_or_404(School, id=school_id)
-    return render(request, 'courses/school_detail.html', {'school' : school})
-
+def course_list(request):
+    courses = Course.objects.all()
+    return render(request, 'courses/course_list.html', {'courses' : courses})
