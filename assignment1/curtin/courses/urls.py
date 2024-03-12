@@ -5,4 +5,5 @@ urlpatterns = [
     #path('', views.index, name='index')
     path('schools/', views.school_list, name='school_list'),
     path('courses/', views.course_list, name='course_list'),
+    path('schools/<int:school_id>/', views.school_detail, name='school_detail'),
 ]
