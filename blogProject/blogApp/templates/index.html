@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <!-- add style.css if u want to-->
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <h1>Blog Posts</h1>
     {% for post in posts %}
         <article>
@@ -18,5 +12,4 @@
     {% empty %}
         <p>No posts have been published yet.</p>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
