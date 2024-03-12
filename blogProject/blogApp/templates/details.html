@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }} - My Blog</title>
+    <!-- Add your style.css if you want to -->
+</head>
+<body>
+    <article>
+        <h1>{{ post.title }}</h1>
+        <p>Published on: {{ post.publication_date | date:"F d, Y" }}</p>
+        <img src="{{ post.featured_image.url }}" alt="Featured image" style="max-width: 100%;" />
+        <div>{{ post.description }}</div>
+        <p>Tags: {{ post.tag }}</p>
+    </article>
+</body>
+</html>

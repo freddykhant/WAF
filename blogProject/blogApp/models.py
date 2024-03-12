@@ -4,10 +4,6 @@ import datetime
 
 # Create your models here.
 class Post(models.Model):
-    STATUS_CHOICES = (
-        ('draft', 'Draft'),
-        ('published', 'Published'),
-    )
 
     title = models.CharField(max_length=255)
     description = models.TextField()
@@ -15,7 +11,6 @@ class Post(models.Model):
     tag = models.CharField(max_length=50)
     slug = models.SlugField(max_length=255, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
 
     def is_pre_covid(self):
         # Defining the cutoff date for pre-COVID-19
@@ -24,3 +19,4 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
