@@ -1,0 +1,6 @@
+The following are references for research on doing Part 8 of the assignment:
+
+1. Django Software Foundation. (n.d.). Django documentation. Django. Retrieved [insert date here], from https://docs.djangoproject.com/en/stable/
+
+2. Vincent, W. S. (2018). Django for beginners: Build websites with Python and Django. William S. Vincent from
+https://djangoforbeginners.com/
