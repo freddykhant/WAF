@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ school.name }}</title>
-</head>
-<body>
+{% extends 'courses/base.html' %}
+
+{% block content %}
     <h2>School: {{ school.name }}</h2>
     <p>Head: {{ school.head }}</p>
     <p>Location: {{ school.location }}</p>
     <h3>Courses Offered:</h3>
     <ul>
         {% for course in courses %}
-            <li>{{ course.name }}, Credits: {{ course.credits }}</li>
+            <li>
+                {{ course.name }}, Credits: {{ course.credits }}
+            </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

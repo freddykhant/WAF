@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course List</title>
-</head>
-<body>
+{% extends 'courses/base.html' %}
+
+{% block content %}
     <h2>List of Courses</h2>
     <ul>
         {% for course in courses %}
-            <li>{{ course.name }}, Credits: {{ course.credits }}</li>
+        <li>
+            {{ course.name }} - Coordinator: {{ course.coordinator }}, Credits: {{ course.credits }}, Offered by: <a href="{% url 'school_detail' course.school.id %}">{{ course.school.name }}</a>
+        </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}
