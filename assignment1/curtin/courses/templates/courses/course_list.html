@@ -5,7 +5,7 @@
     <ul>
         {% for course in courses %}
         <li>
-            {{ course.name }} - Coordinator: {{ course.coordinator }}, Credits: {{ course.credits }}, Offered by: <a href="{% url 'school_detail' course.school.id %}">{{ course.school.name }}</a>
+            {{ course.name }}, Credits: {{ course.credits }}, Offered by: <a href="{% url 'school_detail' course.school.id %}">{{ course.school.name }}</a>
         </li>
         {% endfor %}
     </ul>
