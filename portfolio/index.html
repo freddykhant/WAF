@@ -7,34 +7,33 @@
 
         <style>
             .centered-content {
+                margin-top: 30rem;
                 text-align: center;
-                margin-top: -300px;
             }
             
             .centered-logo {
                 font-size: 4rem; 
-                font-weight: bold; 
+                font-weight:bold; 
             }
 
             .subtitle {
                 font-size: 1.25rem; 
-                margin-top: 1rem; 
-                color: #3a3838; 
             }
 
             .description {
                 font-size: 1.0rem; 
-                margin-top: 6rem; 
-                color: #000000; 
+                margin-top: 5rem; 
                 font-weight: 300; 
             }
 
             .fill-viewport {
-                min-height: 100vh;
+                height: auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                margin-bottom: 35rem;
             }
+            
         </style>
         <title>FreddyHMK</title>
     </head>
@@ -57,20 +56,182 @@
 
         <div class="container fill-viewport">
             <div class="row">
-              <div class="col centered-content">
-                <div class="centered-logo">
-                  FREDDY KHANT
+                <div class="col centered-content">
+                    <div class="centered-logo">
+                        FREDDY KHANT
+                    </div>
+                    <div class="subtitle">
+                        builder, forever student
+                    </div>
+                    <p class="description">
+                        hey! welcome to my website. this here is my first portfolio web page built using html, css and bootstrap.<br>
+                        i want you to get to know me, so look around!😄
+                    </p>
                 </div>
-                <div class="subtitle">
-                  builder, forever student
-                </div>
-                <p class="description">
-                    hey! welcome to my website. this here is my first portfolio web page built using html, css and bootstrap.<br>
-                    i want you to get to know me, so look around!😄
-                </p>
-              </div>
             </div>
-          </div>
+        </div>
+
+        <section id="i know" class="text-center my-5">
+            <div class="container">
+                <h2 class="mb-4">What I Know</h2>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <img src="java.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Java</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <img src="python.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Python</h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <img src="c.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">C</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <img src="swift.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Swift</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="learning" class="my-5">
+            <div class="container">
+                <h2 class="text-center mb-4">WhatI'm Learning</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="html.svg" class="img-fluid rounded-start" alt="Language Image">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">HTML</h5>
+                                        <p class="card-text">The backbone of the web. I'm learning to structure web pages and content with HTML</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="css.svg" class="img-fluid rounded-start" alt="Language Image">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CSS</h5>
+                                        <p class="card-text">I'm playing around with CSS to bring visual life to web pages to make them look and FEEL better</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="javascript.png" class="img-fluid rounded-start" alt="Language Image">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">JavaScript</h5>
+                                        <p class="card-text">Learning JavaScript to add interactivity to web pages and to understand the fundamentals of web programming.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="bootstrap.png" class="img-fluid rounded-start" alt="Language Image">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bootstrap</h5>
+                                        <p class="card-text">Exploring Bootstrap for its responsive design capabilities and component-based approach to building websites quickly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <!-- Me Section -->
+        <section id="me" class="container my-5">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p>
+                        I'm a student pursuing a degree in Computer Science with a passion for web development and technology. Exploring new technologies and continuously improving my skills are my primary goals. Here, you'll find more about my journey, skills, and the projects I've worked on.
+                    </p>
+                    <!-- Add more about your skills, hobbies, etc. -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="container my-5">
+            <h2 class="text-center mb-4">Experience</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p>
+                        While I might still be at the early stages of my professional journey, here are a few projects and experiences I've had that have significantly contributed to my growth.
+                    </p>
+                    <!-- You can list your projects or experiences here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container my-5">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <p>If you're interested in getting in touch, feel free to send me a message through the form below or reach out via social media.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
           
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
