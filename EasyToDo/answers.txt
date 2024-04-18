@@ -1,0 +1,26 @@
+1. What are CRUD operations?
+   CRUD operations stand for Create, Read, Update, and Delete. These are basic functions that applications perform on a database to store, retrieve, modify, and delete data.
+
+2. Why are CRUD operations important?
+   CRUD operations are essential as they provide the fundamental mechanisms required for interacting with databases. They enable developers to build applications that can manage data effectively, ensuring that the data can be accessed, altered, and stored securely and efficiently.
+
+3. What are RESTful services?
+   RESTful services are web services that adhere to the principles of Representational State Transfer (REST). They provide a way of accessing and manipulating textual representations of web resources using a uniform and predefined set of stateless operations.
+
+4. What are the CRUD operations in RESTful services?
+   In RESTful services, the CRUD operations are typically mapped to HTTP methods:
+   - Create is mapped to POST.
+   - Read is mapped to GET.
+   - Update is mapped to PUT or PATCH.
+   - Delete is mapped to DELETE.
+
+
+   1. `app.get()` function: It handles HTTP GET requests at a specified path, using a callback to process and respond to requests.
+
+2. `res.sendFile()` function: Sends a specified file directly to the client, setting the appropriate content type automatically.
+
+3. Difference between `res.render()` and `res.sendFile()`:
+   - `res.render()`: Compiles a template with data to generate dynamic HTML.
+   - `res.sendFile()`: Sends a static file as-is to the client.
+
+Middleware in Express is a function that processes requests and responses in the application's cycle. It can modify request and response objects, execute any code, and call the next middleware in the stack, handling tasks like logging, parsing, authenticating, and session management.
