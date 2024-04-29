@@ -4,6 +4,7 @@ const app = express();
 
 // Middleware to parse URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'pug');
 
 // Serve the index.html file on GET requests to the root
 app.get('/', function(req, res) {
