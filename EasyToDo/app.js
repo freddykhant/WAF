@@ -72,7 +72,6 @@ app.delete('/todos/:id', function(req, res){
       .then(result => {
         if (result.deletedCount === 1) {
           res.json({ message: 'Deleted successfully' }); // Send a JSON response
-          res.redirect('/');
         } else {
           res.status(404).json({ error: 'Todo not found' });
         }
