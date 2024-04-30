@@ -34,7 +34,7 @@ const Todo = mongoose.model('Todo', todoSchema);
 
 // Route to render the Pug template for the homepage
 app.get('/', (req, res) => {
-    Todo.find() // Find all todos to display
+    Todo.find() 
       .then(todos => {
         res.render('index', { title: 'EasyTodo App', todos: todos });
       })
@@ -58,7 +58,7 @@ app.post('/todos', (req, res) => {
     newTodo.save()
       .then(result => {
         console.log('Todo Added:', result);
-        res.redirect('/'); // Redirect to the homepage to display all todos
+        res.redirect('/'); 
       })
       .catch(err => {
         console.error('Error saving the Todo:', err);
@@ -68,10 +68,10 @@ app.post('/todos', (req, res) => {
 
 // Route to handle deleting existing todos
 app.delete('/todos/:id', function(req, res){
-    Todo.deleteOne({ _id: req.params.id }) // Use deleteOne to remove the todo
+    Todo.deleteOne({ _id: req.params.id }) 
       .then(result => {
         if (result.deletedCount === 1) {
-          res.json({ message: 'Deleted successfully' }); // Send a JSON response
+          res.json({ message: 'Deleted successfully' }); 
         } else {
           res.status(404).json({ error: 'Todo not found' });
         }
