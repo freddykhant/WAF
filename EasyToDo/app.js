@@ -1,6 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const mongoose = require( 'mongoose' );
+
+mongoose.connect( 'mongodb+srv://20618166:tulip@cluster0.yh7lhnx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0' )
+.then(() => console.log( 'Connected to MongoDB' ))
+.catch(err => console.error( 'Could not connect to MongoDB' , err));
 
 // Middleware to parse URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
