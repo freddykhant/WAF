@@ -1,0 +1,2 @@
+the timeout middleware is set to 5 seconds. The route handler for '/' delays the response by 6s which is longer than the timeout. 
+when the timeout is reached, the middleware interrupts the process and sends a 503 status.

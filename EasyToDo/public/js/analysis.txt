@@ -1,0 +1,7 @@
+- waits until the DOM is fully loaded before executing to ensure all elements are available
+- attaches a click event listener to elements with the class `button delete-todo`
+- prevents the default action of the event, stopping the browser from following the URL in the `href` attribute
+- retrieves the To-Do item's unique ID from the `data-todoid` attribute of the clicked button, necessary for specifying which To-Do item to delete
+- sends an AJAX DELETE request to the server using the To-Do item's ID, constructing the URL by appending the ID to `/todos/`
+- on successful deletion, logs the server's response to the console and reloads the page to update the list of To-Do items
+- on error, logs the error to the console for debugging
