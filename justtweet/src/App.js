@@ -1,18 +1,25 @@
-import './App.css';
 import React, { Component } from 'react';
 import Navbar from './components/navbar';
-import TweetCard from './components/tweetcard';
-import NewTweet from './components/newtweet';
 import ProfileCover from './components/profilecover';
+import ProfileInfo from './components/profileinfo';
+import ProfileStats from './components/profilestats';
+import NewTweet from './components/newtweet';
+import TweetCard from './components/tweetcard';
 
 class App extends Component {
   constructor(props) {
-      super(props);
-      this.state = { 
+    super(props);
+    this.state = {
         tweets: [],
-        coverImageUrl: 'images/react.png'  // Make sure this path is correct and accessible
-      };
-  }
+        coverImageUrl: 'images/react.png',
+        userStats: {
+            tweets: 51,
+            following: 420,
+            followers: 583,
+            likes: 241
+        }
+    };
+}
 
   handleTweetPost = (tweetText) => {
       const newTweet = { id: Date.now(), text: tweetText, likes: 0 };
@@ -36,19 +43,16 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <Navbar />
-        <ProfileCover coverImageUrl={this.state.coverImageUrl} />
-        <NewTweet onTweetPost={this.handleTweetPost} />
-        {this.state.tweets.map(tweet => (
-            <TweetCard 
-                key={tweet.id} 
-                tweet={tweet} 
-                onDelete={this.handleDeleteTweet} 
-                onLike={this.handleLikeTweet}
-            />
-        ))}
-      </>
+        <>
+            <Navbar />
+            <ProfileCover coverImageUrl={this.state.coverImageUrl} />
+            <ProfileInfo />
+            <ProfileStats stats={this.state.userStats} />
+            <NewTweet onTweetPost={this.handleTweetPost} />
+            {this.state.tweets.map(tweet => (
+                <TweetCard key={tweet.id} tweet={tweet} onDelete={this.handleDeleteTweet} />
+            ))}
+        </>
     );
   }
 }
