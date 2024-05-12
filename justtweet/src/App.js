@@ -11,7 +11,7 @@ class App extends Component {
     super(props);
     this.state = {
         tweets: [],
-        coverImageUrl: 'images/react.png',
+        coverImageUrl: 'images/react2.jpeg',
         userStats: {
             tweets: 51,
             following: 420,

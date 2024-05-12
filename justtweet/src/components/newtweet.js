@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, InputGroup } from 'react-bootstrap';
 
 class NewTweet extends Component {
     constructor(props) {
@@ -13,27 +13,27 @@ class NewTweet extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        // Here you could call a function passed down from App.js to handle the tweet post logic
         this.props.onTweetPost(this.state.tweetText);
-        this.setState({ tweetText: '' }); // Clear the input after submission
+        this.setState({ tweetText: '' }); 
     }
 
     render() {
         return (
-            <Form onSubmit={this.handleSubmit}>
-                <Form.Group controlId="formBasicTweet">
-                    <Form.Label>New Tweet</Form.Label>
-                    <Form.Control 
-                        type="text" 
-                        placeholder="What's happening?" 
-                        value={this.state.tweetText} 
-                        onChange={this.handleChange} 
-                    />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Tweet
-                </Button>
-            </Form>
+            <div className="mt-4 mb-4">
+                <Form onSubmit={this.handleSubmit}>
+                    <InputGroup>
+                        <Form.Control
+                            type="text"
+                            placeholder="What's happening?"
+                            value={this.state.tweetText}
+                            onChange={this.handleChange}
+                            aria-label="New tweet"
+                            aria-describedby="basic-addon2"
+                        />
+                        <Button variant="outline-primary" type="submit">Tweet</Button>    
+                    </InputGroup>
+                </Form>
+            </div>
         );
     }
 }

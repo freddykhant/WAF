@@ -7,6 +7,8 @@ class ProfileInfo extends Component {
                 <img src="profile.jpg" alt="Profile" className="profile-picture"/>
                 <h3>Freddy Khant</h3>
                 <p>@freddykhant</p>
+                <p>Perth, WA</p>
+                <p>"The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past." - Tim Berners-Lee</p>
                 <p>Joined May 2018</p>
             </div>
         );
@@ -14,3 +16,4 @@ class ProfileInfo extends Component {
 }
 
 export default ProfileInfo;
+
