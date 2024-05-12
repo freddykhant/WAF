@@ -3,12 +3,15 @@ import React, { Component } from 'react';
 import Navbar from './components/navbar';
 import TweetCard from './components/tweetcard';
 import NewTweet from './components/newtweet';
-
+import ProfileCover from './components/profilecover';
 
 class App extends Component {
   constructor(props) {
       super(props);
-      this.state = { tweets: [] };
+      this.state = { 
+        tweets: [],
+        coverImageUrl: 'images/react.png'  // Make sure this path is correct and accessible
+      };
   }
 
   handleTweetPost = (tweetText) => {
@@ -32,19 +35,21 @@ class App extends Component {
   }
 
   render() {
-      return (
-          <>
-              <Navbar />
-              <NewTweet onTweetPost={this.handleTweetPost} />
-              {this.state.tweets.length > 0 ? (
-                  this.state.tweets.map(tweet => (
-                      <TweetCard key={tweet.id} tweet={tweet} onDelete={this.handleDeleteTweet} onLike={this.handleLikeTweet} />
-                  ))
-              ) : (
-                  <p className="text-center mt-4">No tweets to display. Start tweeting now!</p>
-              )}
-          </>
-      );
+    return (
+      <>
+        <Navbar />
+        <ProfileCover coverImageUrl={this.state.coverImageUrl} />
+        <NewTweet onTweetPost={this.handleTweetPost} />
+        {this.state.tweets.map(tweet => (
+            <TweetCard 
+                key={tweet.id} 
+                tweet={tweet} 
+                onDelete={this.handleDeleteTweet} 
+                onLike={this.handleLikeTweet}
+            />
+        ))}
+      </>
+    );
   }
 }
 
